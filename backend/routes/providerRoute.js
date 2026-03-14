@@ -13,7 +13,7 @@ import {
 } from "../controllers/providerController.js";
 import authService from "../middleware/authService.js";
 import upload from '../middleware/multer.js';
-
+ 
 const doctorRouter = express.Router();
 
 doctorRouter.post("/login", login);

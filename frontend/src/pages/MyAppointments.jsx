@@ -12,7 +12,6 @@ const MyAppointments = () => {
 
     const [appointments, setAppointments] = useState([])
     const [payment, setPayment] = useState('')
-    console.log(appointments)
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
     // Function to format the date eg. ( 20_01_2000 => 20 Jan 2000 )

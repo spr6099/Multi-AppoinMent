@@ -11,6 +11,7 @@ import MyProfile from './pages/MyProfile'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify'
+import ProtectedRoute from './protect/ProtectedRoute'
 
 const App = () => {
   return (
@@ -19,14 +20,16 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/services/:speciality' element={<Services />} />
-        <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<Login />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path='/services' element={<Services />} />
+          <Route path='/services/:speciality' element={<Services />} />
 
-        <Route path='/appointment/:docId' element={<Appointment />} />
-        <Route path='/my-appointments' element={<MyAppointments />} />
-        <Route path='/my-profile' element={<MyProfile />} />
-        <Route path='/verify' element={<Verify />} />
+          <Route path='/appointment/:docId' element={<Appointment />} />
+          <Route path='/my-appointments' element={<MyAppointments />} />
+          <Route path='/my-profile' element={<MyProfile />} />
+          <Route path='/verify' element={<Verify />} />
+        </Route>
       </Routes>
     </div>
   )

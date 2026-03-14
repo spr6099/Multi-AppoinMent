@@ -9,7 +9,7 @@ const Login = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    console.log(email, password)
+    // console.log(email, password)
     const backendUrl = import.meta.env.VITE_BACKEND_URL
 
     const { setDToken } = useContext(DoctorContext)

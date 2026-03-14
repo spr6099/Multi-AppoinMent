@@ -13,7 +13,7 @@ const DoctorContextProvider = (props) => {
     const [appointments, setAppointments] = useState([])
     const [dashData, setDashData] = useState(false)
     const [profileData, setProfileData] = useState(false)
-console.log(appointments,"app")
+// console.log(appointments,"app")
     // Getting Doctor appointment data from Database using API
     const getAppointments = async () => {
         try {
